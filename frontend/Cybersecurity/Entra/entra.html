@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SC-900: Microsoft Entra Quiz</title>
+  <link rel="stylesheet" href="../../shared/style.css">
+</head>
+<body>
+  <h1>🧭 Introduction to Microsoft Entra (IAM & Access Management)</h1>
+  <p class="description">Test your understanding of Microsoft Entra as part of the SC-900 certification path.</p>
+
+  <div id="scoreDisplay"></div>
+  <div id="quizContainer"></div>
+
+  <button id="retryBtn" onclick="loadQuiz()">🔁 Retry Quiz</button>
+
+  <script>
+    localStorage.setItem("cyber_topic", "entra");  // dynamically set topic for backend
+  </script>
+  <script src="../../shared/quiz.js"></script>
+
+</body>
+</html>

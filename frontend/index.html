@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Learning Tutor</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>📚 Modes</h2>
+    <ul>
+      <li><a href="index.html">🧠 AI Tutor (Math & Science)</a></li>
+      <li><a href="cybersecurity/index.html">🔐 SC-900 Cybersecurity</a></li>
+      <li><a href="teacher.html">👩‍🏫 Teacher Mode</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <h1>🧠 AI Learning Tutor</h1>
+
+    <label for="topicSelect">Choose a topic:</label>
+    <select id="topicSelect">
+      <option value="math">Math</option>
+      <option value="science">Science</option>
+    </select>
+    <button onclick="loadQuiz()">Load Quiz</button>
+
+    <div id="scoreDisplay"></div>
+    <div id="quizContainer"></div>
+
+    <button id="retryBtn" onclick="loadQuiz()">🔁 Retry Quiz</button>
+
+    <label for="customTopic">Or enter a custom topic:</label>
+    <input type="text" id="customTopic" placeholder="e.g. Photosynthesis or Python Loops">
+    <button onclick="generateQuiz()">🎯 Generate Quiz</button>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,603 @@
+{
+  "math": [
+    {
+      "question": "What is 2 + 2?",
+      "options": ["3", "4", "5", "22"],
+      "answer": "4",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is 12 x 13?",
+      "options": ["144", "156", "169", "121"],
+      "answer": "156",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the square root of 576?",
+      "options": ["22", "24", "26", "28"],
+      "answer": "24",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is 5 * 6?",
+      "options": ["11", "30", "56", "60"],
+      "answer": "30",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is 10 - 3?",
+      "options": ["6", "7", "8", "9"],
+      "answer": "7",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is 9 + 6?",
+      "options": ["13", "14", "15", "16"],
+      "answer": "15",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is 7 × 8?",
+      "options": ["54", "56", "58", "64"],
+      "answer": "56",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the value of π (pi) rounded to 2 decimal places?",
+      "options": ["3.14", "3.15", "3.13", "3.12"],
+      "answer": "3.14",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is (3² + 4²)?",
+      "options": ["25", "18", "7", "30"],
+      "answer": "25",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the derivative of x²?",
+      "options": ["x", "2x", "x²", "1"],
+      "answer": "2x",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the integral of 2x dx?",
+      "options": ["x² + C", "2x² + C", "x + C", "x³ + C"],
+      "answer": "x² + C",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Solve: (2x - 5 = 9). What is x?",
+      "options": ["2", "6", "7", "5"],
+      "answer": "7",
+      "difficulty": "medium"
+    }
+  ],
+  "science": [
+    {
+      "question": "What gas do plants absorb from the atmosphere?",
+      "options": ["Oxygen", "Carbon Dioxide", "Hydrogen", "Nitrogen"],
+      "answer": "Carbon Dioxide",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What gas do humans breathe in to survive?",
+      "options": ["Carbon Dioxide", "Oxygen", "Hydrogen", "Nitrogen"],
+      "answer": "Oxygen",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which organ pumps blood through the body?",
+      "options": ["Lungs", "Brain", "Heart", "Liver"],
+      "answer": "Heart",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is H2O more commonly known as?",
+      "options": ["Salt", "Hydrogen", "Water", "Oxygen"],
+      "answer": "Water",
+      "difficulty": "easy"
+    },
+
+    {
+      "question": "What part of the cell contains the DNA?",
+      "options": ["Cytoplasm", "Mitochondria", "Nucleus", "Cell wall"],
+      "answer": "Nucleus",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which planet has the most moons?",
+      "options": ["Earth", "Mars", "Saturn", "Uranus"],
+      "answer": "Saturn",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What force keeps planets in orbit around the sun?",
+      "options": ["Magnetism", "Friction", "Gravity", "Electricity"],
+      "answer": "Gravity",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What kind of energy is stored in food?",
+      "options": ["Kinetic", "Nuclear", "Chemical", "Thermal"],
+      "answer": "Chemical",
+      "difficulty": "medium"
+    },
+
+    {
+      "question": "What is the powerhouse of the cell?",
+      "options": ["Ribosome", "Nucleus", "Mitochondria", "Golgi body"],
+      "answer": "Mitochondria",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which subatomic particle has no charge?",
+      "options": ["Electron", "Proton", "Neutron", "Quark"],
+      "answer": "Neutron",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which gas contributes most to the greenhouse effect?",
+      "options": ["Oxygen", "Methane", "Nitrogen", "Carbon Dioxide"],
+      "answer": "Carbon Dioxide",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What type of bond involves the sharing of electron pairs between atoms?",
+      "options": ["Ionic", "Covalent", "Hydrogen", "Metallic"],
+      "answer": "Covalent",
+      "difficulty": "hard"
+    }
+  ],
+  "intro": [
+    {
+      "question": "What does the 'CIA' in the CIA triad stand for?",
+      "options": ["Cybersecurity, Internet, Access", "Confidentiality, Integrity, Availability", "Control, Identity, Access", "Cloud, Infrastructure, Authentication"],
+      "answer": "Confidentiality, Integrity, Availability",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which of the following is a type of social engineering attack?",
+      "options": ["Phishing", "Ransomware", "DDoS", "Trojan"],
+      "answer": "Phishing",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the primary goal of a ransomware attack?",
+      "options": ["Stealing login credentials", "Monitoring network traffic", "Locking systems and demanding payment", "Redirecting users to fake websites"],
+      "answer": "Locking systems and demanding payment",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the purpose of multi-factor authentication (MFA)?",
+      "options": ["To back up user data", "To enable guest access", "To verify identity using multiple methods", "To block websites"],
+      "answer": "To verify identity using multiple methods",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which cybersecurity model assumes that no one inside or outside the network is trusted by default?",
+      "options": ["Defense in Depth", "Zero Trust", "Least Privilege", "Shared Responsibility"],
+      "answer": "Zero Trust",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which principle ensures that only authorized users can access specific data?",
+      "options": ["Availability", "Non-repudiation", "Confidentiality", "Integrity"],
+      "answer": "Confidentiality",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which type of attack overloads a network or system with traffic to render it unusable?",
+      "options": ["Phishing", "SQL Injection", "DDoS", "Brute Force"],
+      "answer": "DDoS",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is an example of a preventative cybersecurity control?",
+      "options": ["Log analysis", "Incident response plan", "Firewall", "Threat hunting"],
+      "answer": "Firewall",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What type of attacker is typically motivated by financial gain and operates illegally?",
+      "options": ["Red team", "Script kiddie", "Black hat hacker", "White hat hacker"],
+      "answer": "Black hat hacker",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which technology ensures that data has not been altered during transmission?",
+      "options": ["Firewall", "Access control", "Hashing", "Backup"],
+      "answer": "Hashing",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which principle restricts users to only the permissions necessary to perform their jobs?",
+      "options": ["Zero Trust", "Role-based Access", "Least Privilege", "Need to Know"],
+      "answer": "Least Privilege",
+      "difficulty": "hard"
+    },
+    {
+      "question": "In the shared responsibility model, who is responsible for securing data in the cloud?",
+      "options": ["The cloud provider", "The user", "Both the user and cloud provider", "The government"],
+      "answer": "Both the user and cloud provider",
+      "difficulty": "hard"
+    }
+  ],
+  "identity": [
+    {
+      "question": "What is the main purpose of authentication?",
+      "options": ["Grant access to resources", "Verify user identity", "Encrypt data", "Provide internet access"],
+      "answer": "Verify user identity",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the difference between authentication and authorization?",
+      "options": [
+        "Authentication ensures permissions, authorization verifies identity",
+        "Authentication is used in encryption, authorization in compliance",
+        "Authentication verifies identity, authorization grants access",
+        "There is no difference"
+      ],
+      "answer": "Authentication verifies identity, authorization grants access",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which model assumes that no device or user is trusted by default, even inside the network?",
+      "options": ["Defense in Depth", "Shared Responsibility", "Zero Trust", "Federation"],
+      "answer": "Zero Trust",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the role of an identity provider?",
+      "options": [
+        "To host web applications",
+        "To store passwords in a database",
+        "To authenticate and authorize users",
+        "To create cloud infrastructure"
+      ],
+      "answer": "To authenticate and authorize users",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which service provides identity and access management in Microsoft solutions?",
+      "options": ["Microsoft Sentinel", "Microsoft Defender", "Microsoft Entra ID", "Microsoft Priva"],
+      "answer": "Microsoft Entra ID",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is Active Directory primarily used for?",
+      "options": [
+        "Encrypting cloud data",
+        "Detecting threats",
+        "Managing domain-based identity and access",
+        "Analyzing email spam"
+      ],
+      "answer": "Managing domain-based identity and access",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which of the following best describes federation in identity management?",
+      "options": [
+        "Merging multiple user accounts",
+        "Linking identity systems across organizations",
+        "Encrypting sensitive documents",
+        "Automating compliance audits"
+      ],
+      "answer": "Linking identity systems across organizations",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the concept of 'identity as the security perimeter' referring to?",
+      "options": [
+        "Using firewalls to block external access",
+        "Relying on physical security in office buildings",
+        "Using identity verification to secure access to all systems",
+        "Securing only external-facing applications"
+      ],
+      "answer": "Using identity verification to secure access to all systems",
+      "difficulty": "hard"
+    }
+  ],
+  "entra": [
+    {
+      "question": "What is Microsoft Entra ID primarily used for?",
+      "options": [
+        "Device encryption",
+        "Access and identity management",
+        "Email filtering",
+        "Data backup"
+      ],
+      "answer": "Access and identity management",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which of the following is NOT a type of identity supported by Microsoft Entra ID?",
+      "options": [
+        "User identities",
+        "Service identities",
+        "Machine identities",
+        "Print identities"
+      ],
+      "answer": "Print identities",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the purpose of hybrid identity in Microsoft Entra?",
+      "options": [
+        "To support multiple operating systems",
+        "To connect on-premises identity infrastructure with Entra ID",
+        "To provide remote printing solutions",
+        "To encrypt files in OneDrive"
+      ],
+      "answer": "To connect on-premises identity infrastructure with Entra ID",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does multifactor authentication (MFA) in Microsoft Entra help improve?",
+      "options": [
+        "Internet speed",
+        "User experience",
+        "Security",
+        "Storage capacity"
+      ],
+      "answer": "Security",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which capability allows users to reset their passwords without IT help?",
+      "options": [
+        "Password Hash Sync",
+        "Conditional Access",
+        "Privileged Identity Management",
+        "Self-Service Password Reset (SSPR)"
+      ],
+      "answer": "Self-Service Password Reset (SSPR)",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which Microsoft Entra feature allows conditional access based on user risk and context?",
+      "options": [
+        "Global Secure Access",
+        "Entitlement Management",
+        "Conditional Access",
+        "Access Reviews"
+      ],
+      "answer": "Conditional Access",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the purpose of Microsoft Entra roles and RBAC?",
+      "options": [
+        "To restrict network access",
+        "To provide Wi-Fi access",
+        "To manage and assign permissions efficiently",
+        "To monitor email content"
+      ],
+      "answer": "To manage and assign permissions efficiently",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does Microsoft Entra Identity Protection help detect?",
+      "options": [
+        "Malware in documents",
+        "Phishing emails",
+        "Risky sign-ins and user behavior",
+        "Spam traffic"
+      ],
+      "answer": "Risky sign-ins and user behavior",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which Entra capability manages privileged accounts and helps enforce least privilege access?",
+      "options": [
+        "Verified ID",
+        "Access Reviews",
+        "Privileged Identity Management (PIM)",
+        "Self-Service Password Reset"
+      ],
+      "answer": "Privileged Identity Management (PIM)",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What does Microsoft Entra Verified ID allow organizations to do?",
+      "options": [
+        "Store user passwords",
+        "Verify identities using decentralized identity standards",
+        "Send emails securely",
+        "Create shared folders"
+      ],
+      "answer": "Verify identities using decentralized identity standards",
+      "difficulty": "hard"
+    }
+  ],
+
+  "security": [
+    {
+      "question": "What is the primary role of Microsoft Security Copilot?",
+      "options": [
+        "Manage user accounts",
+        "Help write code for developers",
+        "Analyze and summarize security data using AI",
+        "Encrypt all network traffic"
+      ],
+      "answer": "Analyze and summarize security data using AI",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which Azure service helps protect against Distributed Denial of Service (DDoS) attacks?",
+      "options": [
+        "Azure Bastion",
+        "Azure Firewall",
+        "Azure DDoS Protection",
+        "Microsoft Sentinel"
+      ],
+      "answer": "Azure DDoS Protection",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is Microsoft Sentinel?",
+      "options": [
+        "An identity management service",
+        "A cloud-native SIEM and SOAR solution",
+        "A data classification tool",
+        "A Microsoft Defender feature"
+      ],
+      "answer": "A cloud-native SIEM and SOAR solution",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which Microsoft Defender XDR service protects against phishing and malware in emails?",
+      "options": [
+        "Defender for Endpoint",
+        "Defender for Identity",
+        "Defender for Cloud Apps",
+        "Defender for Office 365"
+      ],
+      "answer": "Defender for Office 365",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does Azure Key Vault primarily help with?",
+      "options": [
+        "Monitoring traffic flows",
+        "Managing sensitive data like secrets and keys",
+        "Providing firewall rules",
+        "Securing virtual machines"
+      ],
+      "answer": "Managing sensitive data like secrets and keys",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which service provides visibility into cloud app usage and helps identify and combat threats across Microsoft and third-party apps?",
+      "options": [
+        "Defender for Identity",
+        "Microsoft Sentinel",
+        "Defender for Cloud Apps",
+        "Azure Bastion"
+      ],
+      "answer": "Defender for Cloud Apps",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a primary function of Microsoft Defender for Endpoint?",
+      "options": [
+        "Managing encryption keys",
+        "Detecting and responding to endpoint threats",
+        "Provisioning cloud VMs",
+        "Auditing Active Directory roles"
+      ],
+      "answer": "Detecting and responding to endpoint threats",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which feature in Azure enables secure, seamless RDP/SSH access to VMs without exposing them to the public internet?",
+      "options": [
+        "Azure DDoS Protection",
+        "Azure Bastion",
+        "Azure Key Vault",
+        "Azure Firewall"
+      ],
+      "answer": "Azure Bastion",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What does Microsoft Defender Threat Intelligence provide?",
+      "options": [
+        "Threat actor profiles and intelligence data",
+        "Phishing email filters",
+        "Cloud VM firewalls",
+        "User identity protection"
+      ],
+      "answer": "Threat actor profiles and intelligence data",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which Microsoft Defender service focuses on detecting and responding to identity-based threats?",
+      "options": [
+        "Defender for Endpoint",
+        "Defender for Cloud Apps",
+        "Defender for Office 365",
+        "Defender for Identity"
+      ],
+      "answer": "Defender for Identity",
+      "difficulty": "hard"
+    }
+  ],
+  "priva": [
+    {
+      "question": "What is the purpose of the Microsoft Service Trust Portal?",
+      "options": ["Manage devices", "Learn about Microsoft's trust commitments", "Schedule compliance audits", "Reset passwords"],
+      "answer": "Learn about Microsoft's trust commitments",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which Microsoft solution helps organizations manage subject rights requests and assess privacy risks?",
+      "options": ["Microsoft Entra", "Microsoft Defender", "Microsoft Priva", "Microsoft Purview"],
+      "answer": "Microsoft Priva",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What capability of Microsoft Priva helps limit data exposure by setting access policies?",
+      "options": ["Consent Management", "Subject Rights Requests", "Privacy Risk Management", "Communication Compliance"],
+      "answer": "Privacy Risk Management",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a key feature of Microsoft Priva's Consent Management?",
+      "options": ["Controlling insider threats", "Managing regulatory data retention", "Recording and managing user consent", "Detecting malware in cloud apps"],
+      "answer": "Recording and managing user consent",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which Purview solution helps track and manage how long data is kept?",
+      "options": ["eDiscovery", "Records Management", "Insider Risk", "Defender for Cloud"],
+      "answer": "Records Management",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which Microsoft Purview feature supports searching, exporting, and reviewing emails for legal investigations?",
+      "options": ["Audit", "Compliance Manager", "eDiscovery", "Communication Compliance"],
+      "answer": "eDiscovery",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does Microsoft Purview’s Communication Compliance solution focus on?",
+      "options": ["Monitoring sensitive data transfers", "Flagging offensive or risky communications", "Enforcing password complexity", "Blocking external file sharing"],
+      "answer": "Flagging offensive or risky communications",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which data governance capability of Microsoft Purview helps discover and classify data automatically using AI?",
+      "options": ["Records Management", "Data Map", "Compliance Manager", "Communication Compliance"],
+      "answer": "Data Map",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What feature in Microsoft Purview helps you assess compliance risks and take recommended actions?",
+      "options": ["Compliance Manager", "Access Reviews", "Entitlement Management", "Priva Tracker"],
+      "answer": "Compliance Manager",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which data lifecycle feature allows organizations to retain or delete content automatically based on policies?",
+      "options": ["Retention labels", "Records Management", "Access Reviews", "Audit"],
+      "answer": "Retention labels",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which Microsoft solution supports privacy-by-design by evaluating personal data handling across apps and services?",
+      "options": ["Microsoft Defender XDR", "Microsoft Priva", "Microsoft Sentinel", "Microsoft Entra"],
+      "answer": "Microsoft Priva",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What does Microsoft Purview’s Insider Risk Management integrate with to escalate legal cases?",
+      "options": ["Microsoft Defender", "Azure Key Vault", "eDiscovery", "Microsoft Entra"],
+      "answer": "eDiscovery",
+      "difficulty": "hard"
+    }
+  ]
+
+}
+
+

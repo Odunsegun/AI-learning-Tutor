@@ -1,0 +1,60 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 30px;
+  color: #2c3e50;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  text-align: center;
+  color: #1a73e8;
+  margin-bottom: 30px;
+}
+
+select, button {
+  padding: 10px 16px;
+  margin: 10px 8px 20px 0;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #1a73e8;
+  color: white;
+  cursor: pointer;
+}
+
+#scoreDisplay {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #1a73e8;
+}
+
+.question {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.explanation {
+  margin-top: 12px;
+  padding: 12px;
+  background-color: #eaf3fe;
+  border-left: 4px solid #1a73e8;
+  border-radius: 4px;
+}
+
+label {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 5px;
+}

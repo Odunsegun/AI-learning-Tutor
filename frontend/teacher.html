@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Teacher Mode - AI Learning Tutor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff8e1;
+      border-radius: 10px;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+    h1 { text-align: center; }
+    .success {
+      margin-top: 20px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>👩‍🏫 Teacher Mode</h1>
+
+  <label>Topic:</label>
+  <select id="topic">
+    <option value="math">Math</option>
+    <option value="science">Science</option>
+  </select>
+
+  <label>Question:</label>
+  <textarea id="question" rows="3"></textarea>
+
+  <label>Options (comma-separated):</label>
+  <input type="text" id="options" placeholder="e.g. 2, 4, 6, 8">
+
+  <label>Correct Answer:</label>
+  <input type="text" id="answer" placeholder="e.g. 4">
+
+  <label>Difficulty:</label>
+  <select id="difficulty">
+    <option value="easy">Easy</option>
+    <option value="medium">Medium</option>
+    <option value="hard">Hard</option>
+  </select>
+
+  <button onclick="submitQuestion()">➕ Add Question</button>
+
+  <div class="success" id="successMsg"></div>
+
+  <script>
+    async function submitQuestion() {
+      const payload = {
+        topic: document.getElementById("topic").value,
+        question: document.getElementById("question").value,
+        options: document.getElementById("options").value.split(",").map(opt => opt.trim()),
+        answer: document.getElementById("answer").value,
+        difficulty: document.getElementById("difficulty").value
+      };
+
+      const res = await fetch("http://127.0.0.1:5000/add-question", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+
+      const data = await res.json();
+      document.getElementById("successMsg").innerText = data.message || "Saved!";
+    }
+  </script>
+
+</body>
+</html>
