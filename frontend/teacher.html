@@ -65,6 +65,7 @@
         difficulty: document.getElementById("difficulty").value
       };
 
+      try {
       const res = await fetch("http://127.0.0.1:5000/add-question", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -72,7 +73,10 @@
       });
 
       const data = await res.json();
-      document.getElementById("successMsg").innerText = data.message || "Saved!";
+      document.getElementById("successMsg").innerText = res.ok ? data.message : (data.error || "Unable to save question.");
+      } catch (error) {
+        document.getElementById("successMsg").textContent = "Unable to reach the server. Please retry.";
+      }
     }
   </script>
 

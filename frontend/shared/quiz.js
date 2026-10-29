@@ -1,76 +1,114 @@
-const topic = localStorage.getItem("cyber_topic");
-const userId = localStorage.getItem("user_id") || crypto.randomUUID();
+﻿const userId = localStorage.getItem("user_id") || crypto.randomUUID();
 localStorage.setItem("user_id", userId);
-
-let totalQuestions = 0;
-let correctCount = 0;
+const apiBase = "http://127.0.0.1:5000";
+let quizVersion = 0;
+let activeTopic = "";
+let questions = [];
 let answered = [];
+let pending = [];
+let correctCount = 0;
 
-async function loadQuiz() {
-  const res = await fetch(`http://127.0.0.1:5000/quiz?topic=${topic}&user_id=${userId}`);
-  const questions = await res.json();
-  totalQuestions = questions.length;
+async function api(path, data) {
+  const response = await fetch(apiBase + path, data === undefined ? {} : {
+    method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data)
+  });
+  const result = await response.json();
+  if (!response.ok) throw new Error(result.error || "Request failed. Please retry.");
+  return result;
+}
+
+function updateScore() {
+  document.getElementById("scoreDisplay").textContent = `Score: ${correctCount} / ${questions.length}`;
+}
+
+function renderQuiz(items, topic) {
+  questions = items;
+  activeTopic = topic;
+  answered = items.map(() => false);
+  pending = items.map(() => false);
   correctCount = 0;
-  answered = Array(totalQuestions).fill(false);
-
+  updateScore();
+  const retry = document.getElementById("retryBtn");
+  if (retry) retry.style.display = "none";
   const container = document.getElementById("quizContainer");
-  container.innerHTML = "";
-  document.getElementById("scoreDisplay").textContent = `Score: 0 / ${totalQuestions}`;
-
-  questions.forEach((q, i) => {
+  container.replaceChildren();
+  if (!items.length) container.textContent = "No questions available for this topic.";
+  const version = quizVersion;
+  items.forEach((q, index) => {
     const div = document.createElement("div");
     div.className = "question";
-    div.innerHTML = `
-      <p><strong>Q${i + 1}: ${q.question}</strong></p>
-      ${q.options.map(opt => `
-        <label><input type="radio" name="q${i}" value="${opt}"> ${opt}</label><br>
-      `).join("")}
-      <button onclick="submitAnswer(${i}, '${escapeQuotes(q.question)}', '${escapeQuotes(q.answer)}')">Submit</button>
-      <div id="explanation${i}" class="explanation"></div>
-    `;
+    const title = document.createElement("p");
+    title.textContent = `Q${index + 1}: ${q.question}`;
+    div.appendChild(title);
+    q.options.forEach(option => {
+      const label = document.createElement("label");
+      const input = document.createElement("input");
+      input.type = "radio";
+      input.name = `q${index}`;
+      input.value = option;
+      label.append(input, document.createTextNode(` ${option}`));
+      div.append(label, document.createElement("br"));
+    });
+    const button = document.createElement("button");
+    button.textContent = "Submit";
+    button.onclick = () => { if (version === quizVersion) submitAnswer(index); };
+    const explanation = document.createElement("div");
+    explanation.id = `explanation${index}`;
+    explanation.className = "explanation";
+    div.append(button, explanation);
     container.appendChild(div);
   });
 }
 
-function escapeQuotes(str) {
-  return str.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+async function loadQuiz() {
+  const topic = document.getElementById("topicSelect")?.value || localStorage.getItem("cyber_topic") || "intro";
+  const version = ++quizVersion;
+  try {
+    const items = await api(`/quiz?${new URLSearchParams({ topic, user_id: userId })}`);
+    if (version === quizVersion) renderQuiz(items, topic);
+  } catch (error) {
+    if (version === quizVersion) document.getElementById("quizContainer").textContent = error.message;
+  }
 }
 
-async function submitAnswer(index, question, correctAnswer) {
-  if (answered[index]) return;
-  answered[index] = true;
-
+async function submitAnswer(index) {
+  if (answered[index] || pending[index]) return;
   const selected = document.querySelector(`input[name="q${index}"]:checked`);
-  if (!selected) {
-    alert("Please select an answer.");
-    return;
+  if (!selected) { alert("Please select an answer."); return; }
+  pending[index] = true;
+  const version = quizVersion;
+  const q = questions[index];
+  try {
+    const data = await api("/submit", {
+      question: q.question, user_answer: selected.value, correct_answer: q.answer,
+      user_id: userId, topic: activeTopic
+    });
+    if (version !== quizVersion) return;
+    answered[index] = true;
+    document.getElementById(`explanation${index}`).textContent = data.explanation;
+    if (data.correct) correctCount++;
+    updateScore();
+    if (answered.every(Boolean)) {
+      alert(`Final Score: ${correctCount} / ${questions.length}`);
+      const retry = document.getElementById("retryBtn");
+      if (retry) retry.style.display = "inline-block";
+    }
+  } catch (error) {
+    if (version === quizVersion) document.getElementById(`explanation${index}`).textContent = `${error.message} You can retry.`;
+  } finally {
+    if (version === quizVersion) pending[index] = false;
   }
+}
 
-  const userAnswer = selected.value;
-
-  const res = await fetch("http://127.0.0.1:5000/submit", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      question,
-      user_answer: userAnswer,
-      correct_answer: correctAnswer,
-      user_id: userId,
-      topic
-    })
-  });
-
-  const data = await res.json();
-  const output = `${data.correct ? "✅ Correct!" : "❌ Incorrect!"}<br>${data.explanation}`;
-  document.getElementById(`explanation${index}`).innerHTML = output;
-
-  if (data.correct) correctCount++;
-  document.getElementById("scoreDisplay").textContent = `Score: ${correctCount} / ${totalQuestions}`;
-
-  if (answered.every(a => a)) {
-    setTimeout(() => {
-      alert(`🎉 Final Score: ${correctCount} / ${totalQuestions}`);
-    }, 500);
+async function generateQuiz() {
+  const topic = document.getElementById("customTopic").value.trim();
+  if (!topic) { alert("Please enter a topic."); return; }
+  const version = ++quizVersion;
+  try {
+    const items = await api("/generate", { topic });
+    if (version === quizVersion) renderQuiz(items, topic);
+  } catch (error) {
+    if (version === quizVersion) alert(error.message);
   }
 }
 
